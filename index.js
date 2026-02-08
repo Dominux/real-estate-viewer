@@ -47,6 +47,9 @@ const createScene = async (engine) => {
     const xr = await scene.createDefaultXRExperienceAsync({
       floorMeshes: [env.ground],
     })
+
+    xr.minZ = 0.01
+    xr.maxZ = 100
   }
 
   await loadObj(scene)
